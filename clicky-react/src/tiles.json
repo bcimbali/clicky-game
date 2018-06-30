@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Michael",
       "image":
-        "./images/michael-scott.png",
+        "./../build/images/michael-scott.png",
       "clicked": false
     },
     {
