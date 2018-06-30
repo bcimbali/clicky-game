@@ -1,18 +1,21 @@
+// This actually imports the React node modules
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Card from "./components/Card";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 import './App.css';
+import tiles from "./tiles.json";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="fluid-container">
+        <Navbar />
+        <Header />
+        <Content />
+        <Footer />
       </div>
     );
   }
