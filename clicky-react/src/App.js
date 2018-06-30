@@ -15,6 +15,13 @@ class App extends Component {
         <Navbar />
         <Header />
         <Content />
+        {tiles.map(tile =>  
+        <Card 
+          key={tile.id}
+          name={tile.name}
+          image={tile.image}
+        />)
+        }
         <Footer />
       </div>
     );
