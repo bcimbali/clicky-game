@@ -12,6 +12,10 @@ class App extends Component {
     tiles
   }
 
+  handleSaveClick = () => {
+    console.log("Click Saved");
+  }
+
   render() {
     return (
       <div className="fluid-container">
@@ -24,6 +28,7 @@ class App extends Component {
             name={tile.name}
             image={tile.image}
             clicked={tile.clicked}
+            clickHandler = {this.handleSaveClick}
           />)
           }
         </div>
