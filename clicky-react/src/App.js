@@ -16,9 +16,20 @@ class App extends Component {
   };
 
   handleSaveClick = (id) => {
-    
     this.setState({clicked: true});
     console.log("Click Saved", id);
+    this.handleCorrectClick();
+  }
+
+  handleCorrectClick = () => {
+    if (this.state.score+1 > this.state.topScore) {
+      this.setState({topScore: this.state.topScore+1})
+    }
+    if (this.state.score+1 === this.state.maxScore) {
+      this.setState({score: this.state.score+1, message: "Congrats! You win!", messageClass:"correct"})
+    }else{
+      this.setState({score: this.state.score+1, message: "You guessed correctly!", messageClass:"correct"})
+    }
   }
 
   render() {
