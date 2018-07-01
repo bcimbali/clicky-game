@@ -15,12 +15,14 @@ class App extends Component {
     message: "Click an image to begin!"
   };
 
+  // Click handler to set the clicked state to true
   handleSaveClick = (id) => {
     this.setState({clicked: true});
     console.log("Click Saved", id);
     this.handleCorrectClick();
   }
 
+  // If correct click, update the score, top score and message in navbar
   handleCorrectClick = () => {
     if (this.state.score+1 > this.state.topScore) {
       this.setState({topScore: this.state.topScore+1})
@@ -32,6 +34,7 @@ class App extends Component {
     }
   }
 
+  // Render the App component on the page
   render() {
     return (
       <div className="fluid-container">
