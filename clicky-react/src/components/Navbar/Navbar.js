@@ -7,10 +7,10 @@ const Navbar = (props) => (
             <a className="navbar-brand text-white" href="/">Clicky Game</a>
           </li>
           <li className="col list-inline-item my-auto text-center text-white">
-            Click an image to begin!
+            {props.message}
           </li>
           <li className="col list-inline-item my-auto text-center text-white">
-            Score: 0 | Top Score: 0
+            Score: {props.score} | Top Score: {props.topScore}
           </li>
         </ul>
       </nav>

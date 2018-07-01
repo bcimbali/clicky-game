@@ -9,22 +9,32 @@ import tiles from "./tiles.json";
 
 class App extends Component {
   state = {
-    tiles
-  }
+    tiles: tiles,
+    score: 0,
+    topScore: 0,
+    message: "Click an image to begin!"
+  };
 
-  handleSaveClick = () => {
-    console.log("Click Saved");
+  handleSaveClick = (id) => {
+    
+    this.setState({clicked: true});
+    console.log("Click Saved", id);
   }
 
   render() {
     return (
       <div className="fluid-container">
-        <Navbar />
+        <Navbar
+          score={this.state.score}
+          topScore={this.state.topScore}
+          message={this.state.message}
+        />
         <Header />
         <div className="d-flex justify-content-center">
           {this.state.tiles.map(tile =>  
           <Card 
             key={tile.id}
+            id={tile.id}
             name={tile.name}
             image={tile.image}
             clicked={tile.clicked}
