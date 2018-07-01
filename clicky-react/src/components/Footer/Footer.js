@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = (props) => (
-        <div className="bg-dark footer navbar navbar-fixed-bottom">
+        <div className="bg-dark footer footer-100 navbar">
             <span className="text-muted">Clicky Game</span>
         </div>
 );

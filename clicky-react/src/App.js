@@ -3,25 +3,30 @@ import React, { Component } from 'react';
 import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Content from "./components/Content";
 import Footer from "./components/Footer";
 import './App.css';
 import tiles from "./tiles.json";
 
 class App extends Component {
+  state = {
+    tiles
+  }
+
   render() {
     return (
       <div className="fluid-container">
         <Navbar />
         <Header />
-        <Content />
-        {tiles.map(tile =>  
-        <Card 
-          key={tile.id}
-          name={tile.name}
-          image={tile.image}
-        />)
-        }
+        <div className="d-flex justify-content-center">
+          {this.state.tiles.map(tile =>  
+          <Card 
+            key={tile.id}
+            name={tile.name}
+            image={tile.image}
+            clicked={tile.clicked}
+          />)
+          }
+        </div>
         <Footer />
       </div>
     );

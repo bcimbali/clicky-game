@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Michael",
       "image":
-        "./../build/images/michael-scott.png",
+        "./images/michael-scott.png",
       "clicked": false
     },
     {
@@ -17,8 +17,8 @@
       "id": 3,
       "name": "Kelly",
       "image":
-        "./images/kelly-kapoor",
+        "./images/kelly-kapoor.jpg",
         "clicked": false
     }
-  ]
+]
   

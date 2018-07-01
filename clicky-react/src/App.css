@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.footer-100 {
+  bottom: 0;
+  color: white;
+  position: fixed;
+  height: 10vh;
+  left: 0;
+  width: 100%;
+}
