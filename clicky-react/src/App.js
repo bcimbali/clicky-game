@@ -29,6 +29,13 @@ class App extends Component {
       tileClicked[0].clicked = true;
       this.handleCorrectClick();
       console.log(tileClicked[0].clicked);
+
+      tilez.sort((a, b) => {
+				return 0.5 - Math.random();
+			});
+
+			this.setState({tilez});
+
     }
     else {
       console.log("Already clicked", id);
@@ -50,7 +57,7 @@ class App extends Component {
   }
 
   handleIncorrectClick = () => {
-    this.setState({message: "Incorrect. Try again!"})
+    this.setState({message: "Incorrect. Play again?"})
     this.resetGame();
   }
 
@@ -64,7 +71,8 @@ class App extends Component {
           message={this.state.message}
         />
         <Header />
-        <div className="d-flex justify-content-center">
+
+        <div className="d-flex justify-content-center main-content mx-auto flex-wrap">
           {this.state.tiles.map(tile => ( 
           <Card 
             key={tile.id}
@@ -76,6 +84,7 @@ class App extends Component {
           />
         ))}
         </div>
+
         <Footer />
       </div>
     );

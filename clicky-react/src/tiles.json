@@ -1,23 +1,86 @@
 [
     {
       "id": 1,
-      "name": "Michael",
+      "name": "Audrey",
       "image":
-        "./images/michael-scott.png",
+        "./images/audrey.jpg",
       "clicked": false
     },
     {
       "id": 2,
-      "name": "Oscar",
+      "name": "Nadine",
       "image":
-        "./images/oscar.jpg",
+        "./images/nadine.jpg",
         "clicked": false
     },
     {
       "id": 3,
-      "name": "Kelly",
+      "name": "Blackey",
       "image":
-        "./images/kelly-kapoor.jpg",
+        "./images/blackey.png",
+        "clicked": false
+    },
+    {
+      "id": 4,
+      "name": "Cooper",
+      "image":
+        "./images/cooper.jpg",
+        "clicked": false
+    },
+    {
+      "id": 5,
+      "name": "Bob",
+      "image":
+        "./images/bob.jpeg",
+        "clicked": false
+    },
+    {
+      "id": 6,
+      "name": "Garland",
+      "image":
+        "./images/garland.jpeg",
+        "clicked": false
+    },
+    {
+      "id": 7,
+      "name": "Mike",
+      "image":
+        "./images/one-armed-mike.jpg",
+        "clicked": false
+    },
+    {
+      "id": 8,
+      "name": "Hawk",
+      "image":
+        "./images/hawk.jpg",
+        "clicked": false
+    },
+    {
+      "id": 9,
+      "name": "Dr. Jacoby",
+      "image":
+        "./images/dr-jacoby.jpeg",
+        "clicked": false
+    },
+    {
+      "id": 10,
+      "name": "Laura",
+      "image":
+        "./images/laura.jpg",
+        "clicked": false
+    },
+    {
+      "id": 11,
+      "name": "Shelly",
+      "image":
+        "./images/shelly.jpg",
+        "clicked": false
+    },
+    {
+      "id": 12,
+      "name": "Diane",
+      "image":
+        "./images/diane.jpg",
         "clicked": false
     }
 ]

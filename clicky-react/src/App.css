@@ -35,8 +35,8 @@
 .footer-100 {
   bottom: 0;
   color: white;
-  position: fixed;
-  height: 10vh;
+  /* position: fixed; */
+  height: 8vh;
   left: 0;
   width: 100%;
 }
@@ -47,6 +47,10 @@
 
 .grow:hover { 
   transform: scale(1.05); 
+}
+
+.main-content {
+  max-width: 70vw;
 }
 
 .pointer {
