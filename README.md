@@ -3,6 +3,7 @@ This is a simple click game. The object of the game is to click on only one char
 
 ## Screenshot:
 
+![Screenshot of game](https://github.com/bcimbali/clicky-game/blob/master/clicky-react/public/images/click-game-screenshot.png?raw=true)
 
 ## Built with:
 - React
