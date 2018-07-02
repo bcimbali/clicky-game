@@ -11,27 +11,47 @@ class App extends Component {
   state = {
     tiles: tiles,
     score: 0,
+    maxScore: 12,
     topScore: 0,
     message: "Click an image to begin!"
   };
 
-  // Click handler to set the clicked state to true
-  handleSaveClick = (id) => {
-    this.setState({clicked: true});
-    console.log("Click Saved", id);
-    this.handleCorrectClick();
+  resetGame = () => {
+    this.setState({score: 0, topScore: 0})
   }
 
-  // If correct click, update the score, top score and message in navbar
+  // Click handler to set the clicked state to true
+  handleSaveClick = (id) => {
+      const tilez = this.state.tiles;
+      const tileClicked = tilez.filter(tile => tile.id === id);
+      console.log(tileClicked[0].clicked);
+    if (!tileClicked[0].clicked) {
+      tileClicked[0].clicked = true;
+      this.handleCorrectClick();
+      console.log(tileClicked[0].clicked);
+    }
+    else {
+      console.log("Already clicked", id);
+      this.handleIncorrectClick();
+    }
+  }
+
+  /* If correct click, update the score, top score, and message in navbar.
+  If the score reaches the max score of 12, display the "you win" message in the navbar.*/
   handleCorrectClick = () => {
     if (this.state.score+1 > this.state.topScore) {
       this.setState({topScore: this.state.topScore+1})
     }
-    if (this.state.score+1 === this.state.maxScore) {
+    if (this.state.score+1 >= this.state.maxScore) {
       this.setState({score: this.state.score+1, message: "Congrats! You win!", messageClass:"correct"})
     }else{
       this.setState({score: this.state.score+1, message: "You guessed correctly!", messageClass:"correct"})
     }
+  }
+
+  handleIncorrectClick = () => {
+    this.setState({message: "Incorrect. Try again!"})
+    this.resetGame();
   }
 
   // Render the App component on the page
@@ -45,7 +65,7 @@ class App extends Component {
         />
         <Header />
         <div className="d-flex justify-content-center">
-          {this.state.tiles.map(tile =>  
+          {this.state.tiles.map(tile => ( 
           <Card 
             key={tile.id}
             id={tile.id}
@@ -53,8 +73,8 @@ class App extends Component {
             image={tile.image}
             clicked={tile.clicked}
             clickHandler = {this.handleSaveClick}
-          />)
-          }
+          />
+        ))}
         </div>
         <Footer />
       </div>
