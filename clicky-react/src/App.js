@@ -16,8 +16,12 @@ class App extends Component {
     message: "Click an image to begin!"
   };
 
-  resetGame = () => {
-    this.setState({score: 0, topScore: 0})
+  resetGame = (id) => {
+    const tilez = this.state.tiles;
+    for (let i = 0; i < tilez.length; i++) {
+      tilez[i].clicked = false;
+    }
+    this.setState({score: 0})
   }
 
   // Click handler to set the clicked state to true
