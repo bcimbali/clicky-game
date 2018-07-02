@@ -64,7 +64,7 @@ class App extends Component {
   // Render the App component on the page
   render() {
     return (
-      <div className="fluid-container">
+      <div className="fluid-container lodge">
         <Navbar
           score={this.state.score}
           topScore={this.state.topScore}

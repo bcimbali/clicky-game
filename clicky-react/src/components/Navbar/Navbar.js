@@ -1,15 +1,15 @@
 import React from "react";
 
 const Navbar = (props) => (
-      <nav className="fixed-top navbar navbar-expand-lg bg-dark">
+      <nav className="colors fixed-top navbar navbar-expand-lg">
         <ul className="row center list-inline nav-fill w-100">
-          <li className="col list-inline-item text-center">
-            <a className="navbar-brand text-white" href="/">Clicky Game</a>
+          <li className="col list-inline-item nav-font text-center">
+            <a className="navbar-brand" href="/">Clicky Game</a>
           </li>
-          <li className="col list-inline-item my-auto text-center text-white">
+          <li className="col list-inline-item my-auto nav-font text-center">
             {props.message}
           </li>
-          <li className="col list-inline-item my-auto text-center text-white">
+          <li className="col list-inline-item my-auto nav-font text-center">
             Score: {props.score} | Top Score: {props.topScore}
           </li>
         </ul>
