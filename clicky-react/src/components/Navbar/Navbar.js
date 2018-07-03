@@ -1,7 +1,7 @@
 import React from "react";
 
 const Navbar = (props) => (
-      <nav className="colors fixed-top navbar navbar-expand-lg">
+      <nav className="colors fixed-top navbar nav-height">
         <ul className="row center list-inline nav-fill w-100">
           <li className="col list-inline-item nav-font text-center">
             <a className="navbar-brand" href="/">Clicky Game</a>

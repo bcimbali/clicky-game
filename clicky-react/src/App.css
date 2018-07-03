@@ -75,10 +75,15 @@
 
 .nav-font {
   font-size: 2rem;
+  /* font-size: calc(25px + (100 - 14) * ((40vw - 300px) / (1600 - 300))); */
 }
 
 .nav-font a {
   font-size: 2rem;
+}
+
+.nav-height {
+  height: 10vh;
 }
 
 .pointer {
@@ -87,4 +92,26 @@
 
 .card-select:hover {
   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+}
+
+/* Media queries */
+@media screen and (max-width: 640px) {
+
+  .nav-font {
+    font-size: 0.75rem;
+    /* font-size: calc(25px + (100 - 14) * ((40vw - 300px) / (1600 - 300))); */
+  }
+  
+  .nav-font a {
+    font-size: 0.75rem;
+  }
+
+  .header-font {
+    font-size: 1rem;
+  }
+
+  .header-hgt {
+    max-height: 15vh;
+  }
+
 }
