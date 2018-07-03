@@ -95,7 +95,7 @@
 }
 
 /* Media queries */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
 
   .nav-font {
     font-size: 0.75rem;
@@ -111,7 +111,7 @@
   }
 
   .header-hgt {
-    max-height: 15vh;
+    max-height: 12vh;
   }
 
 }
