@@ -94,6 +94,10 @@
   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }
 
+.h-100vh {
+  min-height: 100vh;
+}
+
 /* Media queries */
 @media screen and (max-width: 768px) {
 
