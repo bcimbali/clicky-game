@@ -78,6 +78,10 @@
   margin-top: 10vh;
 }
 
+.header-pad {
+  padding: 10vh 0 10vh 0;
+}
+
 .icon-font {
   font-size: calc(10px + 14 * (100vw - 320px)/ 800);
 }
@@ -157,6 +161,10 @@
 
   .title-line-hgt {
     line-height: 1.5rem;
+  }
+
+  .header-pad {
+    padding: 5vh 0 5vh 0;
   }
 
 }
