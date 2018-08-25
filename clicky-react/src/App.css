@@ -47,9 +47,37 @@
   color: #58F85C;
 }
 
-.colors-header {
+.tp-text {
   color: #634643;
+  text-shadow:
+   -1px -1px 0 #58F85C,  
+    1px -1px 0 #58F85C,
+    -1px 1px 0 #58F85C,
+     1px 1px 0 #58F85C;
 }
+
+.tp-text a {
+  color: #634643;
+  text-shadow:
+   -1px -1px 0 #58F85C,  
+    1px -1px 0 #58F85C,
+    -1px 1px 0 #58F85C,
+     1px 1px 0 #58F85C;
+}
+
+.bg-nav {
+  background: rgba(99, 70, 67, 0.8);
+}
+
+.gold {
+    color:	#D5AD6D; /*if no support for background-clip*/
+    color: -webkit-linear-gradient(transparent, transparent),
+                -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+    color: -o-linear-gradient(transparent, transparent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+  }
+
 
 .footer-100 {
   bottom: 0;
@@ -75,11 +103,11 @@
 }
 
 .head-mar-top {
-  margin-top: 10vh;
+  margin-top: 0vh;
 }
 
 .header-pad {
-  padding: 10vh 0 10vh 0;
+  padding: 15vh 0 10vh 0;
 }
 
 .icon-font {
@@ -164,7 +192,25 @@
   }
 
   .header-pad {
-    padding: 5vh 0 5vh 0;
+    padding: 15vh 0 5vh 0;
+  }
+
+  .tp-text {
+    color: #634643;
+    text-shadow:
+     -0.5px -0.5px 0 #58F85C,  
+      0.5px -0.5px 0 #58F85C,
+      -0.5px 0.5px 0 #58F85C,
+      0.5px 0.5px 0 #58F85C;
+  }
+  
+  .tp-text a {
+    color: #634643;
+    text-shadow:
+    -0.5px -0.5px 0 #58F85C,  
+    0.5px -0.5px 0 #58F85C,
+    -0.5px 0.5px 0 #58F85C,
+    0.5px 0.5px 0 #58F85C;
   }
 
 }

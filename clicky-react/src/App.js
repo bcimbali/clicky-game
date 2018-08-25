@@ -13,7 +13,7 @@ class App extends Component {
     score: 0,
     maxScore: 12,
     topScore: 0,
-    message: "Click an image to begin!"
+    message: "CLICK AN IMAGE TO BEGIN!"
   };
 
   resetGame = (id) => {
@@ -54,14 +54,14 @@ class App extends Component {
       this.setState({topScore: this.state.topScore+1})
     }
     if (this.state.score+1 >= this.state.maxScore) {
-      this.setState({score: this.state.score+1, message: "Congrats! You win!", messageClass:"correct"})
+      this.setState({score: this.state.score+1, message: "CONGRATS! YOU WIN!", messageClass:"correct"})
     }else{
-      this.setState({score: this.state.score+1, message: "You guessed correctly!", messageClass:"correct"})
+      this.setState({score: this.state.score+1, message: "YOU GUESSED CORRECTLY!", messageClass:"correct"})
     }
   }
 
   handleIncorrectClick = () => {
-    this.setState({message: "Incorrect. Play again?"})
+    this.setState({message: "INCORRECT. PLAY AGAIN?"})
     this.resetGame();
   }
 
