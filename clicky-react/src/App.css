@@ -27,6 +27,11 @@
   to { transform: rotate(360deg); }
 }
 
+.bg-header {
+  /* background-color: darkmagenta; */
+  background: url('./images/tileable_wood_texture.png');
+}
+
 .card-holder img {
   height: 200px;
   width: 200px;
@@ -48,11 +53,13 @@
 
 .footer-100 {
   bottom: 0;
-  color: white;
-  /* position: fixed; */
   height: 8vh;
   left: 0;
   width: 100%;
+}
+
+.footer-mgn {
+  top: 5vh;
 }
 
 .grow { 
@@ -84,6 +91,10 @@
 
 .nav-height {
   height: 10vh;
+}
+
+.padding-main {
+  padding-bottom: 5vh;
 }
 
 .pointer {

@@ -70,13 +70,14 @@ class App extends Component {
     return (
       <div className="fluid-container lodge h-100vh">
         <Navbar
+          className="row"
           score={this.state.score}
           topScore={this.state.topScore}
           message={this.state.message}
         />
-        <Header />
+        <Header className="bg-header row" />
 
-        <div className="d-flex justify-content-center main-content mx-auto flex-wrap">
+        <div className="d-flex justify-content-center main-content mx-auto padding-main flex-wrap row">
           {this.state.tiles.map(tile => ( 
           <Card 
             key={tile.id}
@@ -89,7 +90,7 @@ class App extends Component {
         ))}
         </div>
 
-        <Footer />
+        <Footer className="footer-mgn row" />
       </div>
     );
   }
