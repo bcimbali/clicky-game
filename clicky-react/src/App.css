@@ -198,28 +198,22 @@ background: linear-gradient(to right, #000000, #EB5757);
     line-height: 1.5rem;
   }
 
+  .header-font {
+    font-size: 6vw;
+  }
+
   .header-pad {
     padding: 15vh 0 5vh 0;
   }
 
   .tp-text {
-    color: #634643;
-    text-shadow:
-     -0.5px -0.5px 0 #58F85C,  
-      0.5px -0.5px 0 #58F85C,
-      -0.5px 0.5px 0 #58F85C,
-      0.5px 0.5px 0 #58F85C,
-      3px 3px 0.5px #000;
+    color: #58F85C;
+    text-shadow: none;
   }
   
   .tp-text a {
-    color: #634643;
-    text-shadow:
-    -0.5px -0.5px 0 #58F85C,  
-    0.5px -0.5px 0 #58F85C,
-    -0.5px 0.5px 0 #58F85C,
-    0.5px 0.5px 0 #58F85C,
-    3px 3px 0.5px #000;
+    color: #58F85C;
+    text-shadow: none;
   }
 
 }
