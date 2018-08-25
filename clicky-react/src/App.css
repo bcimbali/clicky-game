@@ -70,6 +70,10 @@
   transform: scale(1.05); 
 }
 
+.header-font {
+  font-size: 2.5vw;
+}
+
 .lodge {
   background: #649173; 
   background: -webkit-linear-gradient(to right, #DBD5A4, #649173); 
@@ -81,12 +85,14 @@
 }
 
 .nav-font {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: 2vw;
   /* font-size: calc(25px + (100 - 14) * ((40vw - 300px) / (1600 - 300))); */
 }
 
 .nav-font a {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: 2vw;
 }
 
 .nav-height {
@@ -121,12 +127,12 @@
     font-size: 0.75rem;
   }
 
-  .header-font {
+  /* .header-font {
     font-size: 1rem;
-  }
+  } */
 
-  .header-hgt {
-    max-height: 12vh;
-  }
+  /* .header-hgt {
+    max-height: 25vh;
+  } */
 
 }
