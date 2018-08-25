@@ -74,6 +74,14 @@
   font-size: 2.5vw;
 }
 
+.head-mar-top {
+  margin-top: 10vh;
+}
+
+.icon-font {
+  font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+}
+
 .lodge {
   background: #649173; 
   background: -webkit-linear-gradient(to right, #DBD5A4, #649173); 
@@ -95,8 +103,24 @@
   font-size: 2vw;
 }
 
+.nav-calc-font {
+  font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+}
+
+.nav-shadow {
+  box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+}
+
+.nav-width {
+  min-width: 100vw;
+}
+
 .nav-height {
   height: 10vh;
+}
+
+.nav-li-width {
+  min-width: 33vw;
 }
 
 .padding-main {
@@ -105,6 +129,10 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.title-line-hgt {
+  line-height: 2rem;
 }
 
 .card-select:hover {
@@ -127,12 +155,28 @@
     font-size: 0.75rem;
   }
 
-  /* .header-font {
-    font-size: 1rem;
-  } */
+  .title-line-hgt {
+    line-height: 1.5rem;
+  }
 
-  /* .header-hgt {
-    max-height: 25vh;
-  } */
+}
+
+@media screen and (max-width: 450px) {
+  .nav-font {
+    font-size: 0.5rem;
+    /* font-size: calc(25px + (100 - 14) * ((40vw - 300px) / (1600 - 300))); */
+  }
+  
+  .nav-font a {
+    font-size: 0.5rem;
+  }
+
+  .navbar li {
+    width: 40%;
+}
+
+.title-line-hgt {
+  line-height: 1rem;
+}
 
 }
