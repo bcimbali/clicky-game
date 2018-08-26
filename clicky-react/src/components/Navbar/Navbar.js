@@ -8,7 +8,7 @@ const Navbar = (props) => (
               TWIN PEAKS <br></br>MEMORY GAME
             </a>
           </li>
-          <li className="col list-inline-item my-auto nav-calc-font m-0 p-0 text-center">
+          <li id='animate-this' className="col list-inline-item my-auto nav-calc-font m-0 p-0 text-center">
             {props.message}
           </li>
           <li className="col list-inline-item my-auto nav-calc-font m-0 p-0 score-li-width text-center">

@@ -16,6 +16,39 @@ class App extends Component {
     message: "CLICK AN IMAGE TO BEGIN!"
   };
 
+  // componentDidUpdate(prevState) {
+  //   let element = document.getElementById("animate-this");
+  //   element.classList.toggle('jello-vertical');
+  // }
+
+  // componentWillUpdate(prevState) {
+  //   let element = document.getElementById("animate-this");
+  //   element.classList.toggle('jello-vertical');
+  // }
+
+  // componentDidMount(prevState) {
+  //   if (state.score != prevState.score) { 
+  //   let element = document.getElementById("animate-this");
+  //   element.classList.add('jello-vertical');
+  //   }
+  // }
+
+  removeAnimation() {
+    let element = document.getElementById("animate-this");
+    element.classList.remove('jello-vertical');
+    // alert('remove animation');
+  }
+
+  addAnimation() {
+    let element = document.getElementById("animate-this");
+    element.classList.add('jello-vertical');
+  }
+
+  toggleAnimation() {
+    this.addAnimation();
+    setTimeout(this.removeAnimation, 500);
+  }
+
   resetGame = (id) => {
     const tilez = this.state.tiles;
     for (let i = 0; i < tilez.length; i++) {
@@ -26,13 +59,14 @@ class App extends Component {
 
   // Click handler to set the clicked state to true
   handleSaveClick = (id) => {
+      this.toggleAnimation();
       const tilez = this.state.tiles;
       const tileClicked = tilez.filter(tile => tile.id === id);
-      console.log(tileClicked[0].clicked);
+      
+
     if (!tileClicked[0].clicked) {
       tileClicked[0].clicked = true;
       this.handleCorrectClick();
-      console.log(tileClicked[0].clicked);
 
       tilez.sort((a, b) => {
 				return 0.5 - Math.random();
@@ -50,6 +84,7 @@ class App extends Component {
   /* If correct click, update the score, top score, and message in navbar.
   If the score reaches the max score of 12, display the "you win" message in the navbar.*/
   handleCorrectClick = () => {
+    
     if (this.state.score+1 > this.state.topScore) {
       this.setState({topScore: this.state.topScore+1})
     }
