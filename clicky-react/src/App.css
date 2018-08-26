@@ -79,7 +79,8 @@
 
 .neon {
     /* font-size: 60px; */
-    font-family: "Brush Script MT", cursive;
+    /* font-family: "Brush Script MT", cursive; */
+    font-family: 'Dawning of a New Day', Helvetica, Arial, sans-serif;
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px rgb(255, 204, 204), 0 0 20px #fd0054, 0 0 30px #fd0054, 0 0 40px #fd0054, 0 0 55px #fd0054, 0 0 75px #fd0054;
     text-align: center;
