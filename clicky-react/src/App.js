@@ -21,7 +21,15 @@ class App extends Component {
   this.removeAnimation = this.removeAnimation.bind(this);
   };
 
-  // Removes animation CSS class
+  /* 
+  *  ----------------------------------------------------------------------------------
+  *
+  *  Functions for handling animation
+  * 
+  *  ----------------------------------------------------------------------------------
+  */
+
+  // REMOVES animation CSS class
   removeAnimation = () => {
     // Grab the text at the top middle of the page
     let element = document.getElementById("animate-this");
@@ -37,7 +45,7 @@ class App extends Component {
     }
   }
 
-  // Adds animation CSS class
+  // ADDS animation CSS class
   addAnimation = (isCorrect) => {
     // Grab the text at the top middle of the page
     let element = document.getElementById("animate-this");
@@ -53,9 +61,8 @@ class App extends Component {
     }
   }
 
-  // Toggles the CSS class for animation
+  // TOGGLES the CSS class for animation
   toggleAnimation = (isCorrect) => {
-    console.log('isCorrect is: ', isCorrect);
     // If the guess is correct...
     if (isCorrect) {
       // Add animation
@@ -73,47 +80,50 @@ class App extends Component {
     
   }
 
-  // Resets the game
-  resetGame = (id) => {
-    const tilez = this.state.tiles;
-    for (let i = 0; i < tilez.length; i++) {
-      tilez[i].clicked = false;
-    }
-    this.setState({score: 0})
-  }
+  /* 
+  *  ----------------------------------------------------------------------------------
+  *
+  *  Functions for game logic
+  * 
+  *  ----------------------------------------------------------------------------------
+  */
 
-  // Click handler to set the clicked state to true.
+  // Main click handler function
   handleSaveClick = (id) => {
-      // Variable to hold the tiles state.
-      const tilez = this.state.tiles;
-      // Search through character tiles to find the one that matches the clicked id.
-      const tileClicked = tilez.filter(tile => tile.id === id);
-      
-    // If the tile isn't clicked...
-    if (!tileClicked[0].clicked) {
-      // ...set it to now be clicked
-      tileClicked[0].clicked = true;
-      // ...call this function to register the correct guess
-      this.handleCorrectClick();
-      // ...add the bouncy animation for correct guess
-      this.toggleAnimation(true);
+    // Variable to hold the tiles state.
+    const tilez = this.state.tiles;
+    // Search through character tiles to find the one that matches the clicked id.
+    const tileClicked = tilez.filter(tile => tile.id === id);
+    
+  // If the tile isn't clicked...
+  if (!tileClicked[0].clicked) {
+    // ...set it to now be clicked
+    tileClicked[0].clicked = true;
+    // ...call this function to register the correct guess
+    this.handleCorrectClick();
+    // ...add the bouncy animation for correct guess
+    this.toggleAnimation(true);
 
-      // ... randomize character tiles
-      tilez.sort((a, b) => {
-				return 0.5 - Math.random();
-			});
+    // ... randomize character tiles
+    this.randomizeCharacters(tilez);
 
-			this.setState({tilez});
+    this.setState({tilez});
 
-    }
-    else {
-      this.handleIncorrectClick();
-      this.toggleAnimation(false);
-    }
+  }
+  else {
+    this.handleIncorrectClick();
+    this.toggleAnimation(false);
+  }
+}
+
+  // Function to randomize the characters
+  randomizeCharacters = (characters) => {
+    characters.sort((a, b) => {
+      return 0.5 - Math.random();
+    });
   }
 
-  /* If correct click, update the score, top score, and message in navbar.
-  If the score reaches the max score of 12, display the "you win" message in the navbar.*/
+  // Handler for correct guesses/clicks
   handleCorrectClick = () => {
     this.setState({isGuessCorrect: true});
     if (this.state.score+1 > this.state.topScore) {
@@ -127,6 +137,7 @@ class App extends Component {
     }
   }
 
+  // Handler for incorrect guesses/clicks
   handleIncorrectClick = () => {
     this.setState({
       message: "INCORRECT. PLAY AGAIN?",
@@ -135,6 +146,23 @@ class App extends Component {
     // this.toggleIncorrectAnimation();
     this.resetGame();
   }
+
+  // Resets the game
+  resetGame = (id) => {
+    const tilez = this.state.tiles;
+    for (let i = 0; i < tilez.length; i++) {
+      tilez[i].clicked = false;
+    }
+    this.setState({score: 0})
+  }
+
+  /* 
+  *  ----------------------------------------------------------------------------------
+  *
+  *  Render and Return
+  * 
+  *  ----------------------------------------------------------------------------------
+  */
 
   // Render the App component on the page
   render() {
