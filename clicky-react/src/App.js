@@ -44,9 +44,24 @@ class App extends Component {
     element.classList.add('jello-vertical');
   }
 
+  addIncorrectAnimation() {
+    let element = document.getElementById("animate-this");
+    element.classList.add('shake-horizontal');
+  }
+
+  removeIncorrectAnimation() {
+    let element = document.getElementById("animate-this");
+    element.classList.remove('shake-horizontal');
+  }
+
   toggleAnimation() {
     this.addAnimation();
     setTimeout(this.removeAnimation, 500);
+  }
+
+  toggleIncorrectAnimation() {
+    this.addIncorrectAnimation();
+    setTimeout(this.removeIncorrectAnimation, 500);
   }
 
   resetGame = (id) => {
@@ -59,7 +74,7 @@ class App extends Component {
 
   // Click handler to set the clicked state to true
   handleSaveClick = (id) => {
-      this.toggleAnimation();
+      
       const tilez = this.state.tiles;
       const tileClicked = tilez.filter(tile => tile.id === id);
       
@@ -84,7 +99,7 @@ class App extends Component {
   /* If correct click, update the score, top score, and message in navbar.
   If the score reaches the max score of 12, display the "you win" message in the navbar.*/
   handleCorrectClick = () => {
-    
+    this.toggleAnimation();
     if (this.state.score+1 > this.state.topScore) {
       this.setState({topScore: this.state.topScore+1})
     }
@@ -96,7 +111,8 @@ class App extends Component {
   }
 
   handleIncorrectClick = () => {
-    this.setState({message: "INCORRECT. PLAY AGAIN?"})
+    this.setState({message: "INCORRECT. PLAY AGAIN?"});
+    this.toggleIncorrectAnimation();
     this.resetGame();
   }
 
