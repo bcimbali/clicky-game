@@ -28,8 +28,7 @@
 }
 
 .bg-header {
-  /* background-color: darkmagenta; */
-  background: url('./images/dark_wood.png');
+  background: url('http://res.cloudinary.com/bcimbali/image/upload/c_scale,dpr_auto,f_auto,q_auto/v1535911207/twin-peaks-memory-game/dark_wood.png');
 }
 
 .card-holder img {
@@ -128,14 +127,9 @@
 }
 
 .lodge {
-  /* background: #649173; 
-  background: -webkit-linear-gradient(to right, #DBD5A4, #649173); 
-  background: linear-gradient(to right, #DBD5A4, #649173);  */
-
   background: #EB5757; 
-background: -webkit-linear-gradient(to right, #000000, #EB5757); 
-background: linear-gradient(to right, #000000, #EB5757); 
-
+  background: -webkit-linear-gradient(to right, #000000, #EB5757); 
+  background: linear-gradient(to right, #000000, #EB5757); 
 }
 
 .main-content {
