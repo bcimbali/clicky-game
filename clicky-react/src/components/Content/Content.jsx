@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Content = (props) => (
+function Content() {
+  return (
     <div className="content">
     </div>
-);
+  );
+};
 
 export default Content;

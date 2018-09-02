@@ -1,11 +1,13 @@
-// This actually imports the React node modules
-import React, { Component } from 'react';
-import Card from "./components/Card";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import './App.css';
-import tiles from "./tiles.json";
+
+// This actually imports the React node modules
+import React, {Component} from 'react';
+
+import Card from './components/Card';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import tiles from './tiles.json';
 
 class App extends Component {
   constructor() {
@@ -16,7 +18,7 @@ class App extends Component {
     score: 0,
     maxScore: 12,
     topScore: 0,
-    message: "CLICK AN IMAGE TO BEGIN!"
+    message: 'CLICK AN IMAGE TO BEGIN!'
   }
   this.removeAnimation = this.removeAnimation.bind(this);
   };
@@ -130,17 +132,17 @@ class App extends Component {
       this.setState({topScore: this.state.topScore+1})
     }
     if (this.state.score+1 >= this.state.maxScore) {
-      this.setState({score: this.state.score+1, message: "CONGRATS! YOU WIN!", messageClass:"correct"})
+      this.setState({score: this.state.score+1, message: 'CONGRATS! YOU WIN!', messageClass: 'correct'})
     } 
     else {
-      this.setState({score: this.state.score+1, message: "YOU GUESSED CORRECTLY!", messageClass:"correct"})
+      this.setState({score: this.state.score+1, message: 'YOU GUESSED CORRECTLY!', messageClass: 'correct'})
     }
   }
 
   // Handler for incorrect guesses/clicks
   handleIncorrectClick = () => {
     this.setState({
-      message: "INCORRECT. PLAY AGAIN?",
+      message: 'INCORRECT. PLAY AGAIN?',
       isGuessCorrect: false
   });
     // this.toggleIncorrectAnimation();
