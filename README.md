@@ -14,7 +14,7 @@ This is a simple memorization and click game. The object of the game is to click
 
 ## Screenshot:
 
-![Screenshot of game](https://github.com/bcimbali/clicky-game/blob/master/clicky-react/public/images/click-game-screenshot.png?raw=true)
+![Screenshot of game](https://res.cloudinary.com/bcimbali/image/upload/dpr_auto,c_scale,f_auto,q_auto:eco,w_900/v1535311955/tp-mem-retina-1.png)
 
 ## How to install and Run:
 - `git clone` the repo
