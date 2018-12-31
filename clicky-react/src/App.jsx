@@ -20,7 +20,6 @@ class App extends Component {
     topScore: 0,
     message: 'CLICK AN IMAGE TO BEGIN!'
   }
-  this.removeAnimation = this.removeAnimation.bind(this);
   };
 
   /* 
