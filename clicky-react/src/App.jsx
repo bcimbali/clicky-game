@@ -171,24 +171,25 @@ class App extends Component {
 
   // Render the App component on the page
   render() {
+    const { message, score, tiles, topScore } = this.state;
     return (
       <div className="fluid-container lodge h-100vh">
         <Navbar
           className="row"
-          score={this.state.score}
-          topScore={this.state.topScore}
-          message={this.state.message}
+          score={score}
+          topScore={topScore}
+          message={message}
         />
         <Header className="bg-header row" />
 
         <div className="d-flex justify-content-center main-content mx-auto padding-main flex-wrap row">
-          {this.state.tiles.map(tile => (
+          {tiles.map(({ id, name, image, clicked }) => (
             <Card
-              key={tile.id}
-              id={tile.id}
-              name={tile.name}
-              image={tile.image}
-              clicked={tile.clicked}
+              key={id}
+              id={id}
+              name={name}
+              image={image}
+              clicked={clicked}
               clickHandler={this.handleSaveClick}
             />
           ))}
